@@ -1,0 +1,5 @@
+echo "Running safety verification on swf_termpaper.pml"
+spin -a -f '![](critical_val>0)' swf_termpaper.pml
+gcc -DVECTORSZ=4096 -DSAFETY -o pan pan.c
+./pan
+echo "Done running safety verification on swf_termpaper.pml"

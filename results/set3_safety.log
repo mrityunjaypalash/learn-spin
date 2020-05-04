@@ -1,0 +1,66 @@
+Running safety verification on swf_termpaper.pml
+warning: for p.o. reduction to be valid the never claim must be stutter-invariant
+(never claims generated from LTL formulae are stutter-invariant)
+
+(Spin Version 6.5.1 -- 20 December 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (never_0)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 736 byte, depth reached 2795, errors: 0
+     5775 states, stored
+     1113 states, matched
+     6888 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    4.208	equivalent memory usage for states (stored*(State-vector + overhead))
+    5.026	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  133.222	total actual memory usage
+
+
+unreached in proctype ChildProcess
+	swf_termpaper.pml:230, state 34, "p_state.l = l"
+	swf_termpaper.pml:231, state 35, "p_state.m = m"
+	(2 of 122 states)
+unreached in proctype HubController
+	swf_termpaper.pml:420, state 32, "c2 = 0"
+	swf_termpaper.pml:425, state 36, "c2 = 0"
+	swf_termpaper.pml:428, state 39, "c1 = 0"
+	swf_termpaper.pml:433, state 46, "c2 = 0"
+	swf_termpaper.pml:420, state 137, "c2 = 0"
+	swf_termpaper.pml:425, state 141, "c2 = 0"
+	swf_termpaper.pml:428, state 144, "c1 = 0"
+	swf_termpaper.pml:433, state 151, "c2 = 0"
+	swf_termpaper.pml:502, state 207, "isOver1 = 0"
+	swf_termpaper.pml:498, state 208, "((h_input.proc[1].m==S_OVER))"
+	swf_termpaper.pml:498, state 208, "else"
+	swf_termpaper.pml:512, state 213, "o1 = O_CONTINUE"
+	swf_termpaper.pml:508, state 214, "((h_input.proc[1].m==S_IDLE))"
+	swf_termpaper.pml:508, state 214, "else"
+	swf_termpaper.pml:522, state 218, "h_state.proc[1].o = o1"
+	swf_termpaper.pml:523, state 219, "h_state.proc[1].isOver = isOver1"
+	swf_termpaper.pml:494, state 220, "c1 = 1"
+	swf_termpaper.pml:530, state 223, "ch_HtoP[(id2-1)]!id2,h_send.c,h_send.o"
+	swf_termpaper.pml:531, state 224, "printf('\nHC: Message sent (%d, %e) to CP(%d)',h_send.c,h_send.o,id2)"
+	swf_termpaper.pml:528, state 225, "h_send.c = h_state.proc[1].c"
+	(18 of 235 states)
+unreached in proctype parent
+	linkedlistlib.pml:47, state 16, "printf('\n--(%d, %d, %d)\n',i,list[i].value,list[i].next)"
+	linkedlistlib.pml:49, state 17, "assert((list[i].value!=list[next].value))"
+	linkedlistlib.pml:58, state 25, "i = next"
+	(3 of 85 states)
+unreached in claim never_0
+	swf_termpaper.pml.nvr:10, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 0.03 seconds
+pan: rate    192500 states/second
+Done running safety verification on swf_termpaper.pml

@@ -1,0 +1,284 @@
+      
+Critical Value: 255      
+Begin List
+      
+--Head Node
+      
+End List
+      
+Start Memory print
+      
+Location: 1, Value: 0, Next: 2      
+Location: 2, Value: 255, Next: 0      
+Location: 3, Value: 0, Next: 0      
+End Memory print
+              
+CP(2) Started.                  
+HC Started with 2 processes 1 and 2.          
+CP(1) Started.                  
+HC: Message sent (1, O_INSERT) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(16,1,S_SEARCH)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(11,1,S_SEARCH)              
+CP(2): Message sent (16, 1, S_SEARCH)          
+CP(1): Message sent (11, 1, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(1,O_INSERT,0)]----[(11,1,S_SEARCH),(16,1,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (11,1,S_SEARCH)----(1,O_CONTINUE)---->(11,1,S_INSERT)              
+CP(2): (16,1,S_SEARCH)----(1,O_CONTINUE)---->(16,1,S_INSERT)          
+CP(1): Message sent (11, 1, S_INSERT)              
+CP(2): Message sent (16, 1, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(11,1,S_INSERT),(16,1,S_INSERT)]---->[(0,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (0, O_CONTINUE) to CP(1)          
+CP(1): (11,1,S_INSERT)----(0,O_CONTINUE)---->(11,1,S_INSERT)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): Message sent (11, 1, S_INSERT)              CP(2): Critical Value (before): 255, a: 0, b: 255,  c:16              
+CP(2): (16,1,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): Message sent (0, 0, S_IDLE)                  
+HC: [(0,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(11,1,S_INSERT),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)          CP(1): Critical Value (before): 3824, a: 0, b: 16,  c:11              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(15,1,S_SEARCH)          
+CP(1): (11,1,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): Message sent (15, 1, S_SEARCH)          
+CP(1): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(0,0,S_IDLE),(15,1,S_SEARCH)]---->[(1,O_INSERT,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_INSERT) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(12,1,S_SEARCH)              
+CP(2): (15,1,S_SEARCH)----(1,O_CONTINUE)---->(15,4,S_SEARCH)              
+CP(2): Message sent (15, 4, S_SEARCH)          
+CP(1): Message sent (12, 1, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(1,O_CONTINUE,0)]----[(12,1,S_SEARCH),(15,4,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (12,1,S_SEARCH)----(1,O_CONTINUE)---->(12,4,S_SEARCH)              
+CP(2): (15,4,S_SEARCH)----(1,O_CONTINUE)---->(15,4,S_INSERT)          
+CP(1): Message sent (12, 4, S_SEARCH)              
+CP(2): Message sent (15, 4, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(12,4,S_SEARCH),(15,4,S_INSERT)]---->[(0,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (0, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (12,4,S_SEARCH)----(0,O_CONTINUE)---->(12,4,S_SEARCH)          
+CP(1): Message sent (12, 4, S_SEARCH)              CP(2): Critical Value (before): 13145, a: 11, b: 16,  c:15              
+CP(2): (15,4,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): Message sent (0, 0, S_IDLE)                  
+HC: [(0,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(12,4,S_SEARCH),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)          
+CP(1): (12,4,S_SEARCH)----(1,O_CONTINUE)---->(12,4,S_INSERT)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(14,1,S_SEARCH)          
+CP(1): Message sent (12, 4, S_INSERT)              
+CP(2): Message sent (14, 1, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(12,4,S_INSERT),(14,1,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          CP(1): Critical Value (before): 10516, a: 11, b: 15,  c:12          
+CP(1): (12,4,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): (14,1,S_SEARCH)----(1,O_CONTINUE)---->(14,4,S_SEARCH)          
+CP(1): Message sent (0, 0, S_IDLE)              
+CP(2): Message sent (14, 4, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(0,0,S_IDLE),(14,4,S_SEARCH)]---->[(1,O_INSERT,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_INSERT) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              
+CP(2): (14,4,S_SEARCH)----(1,O_CONTINUE)---->(14,6,S_SEARCH)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(13,1,S_SEARCH)              
+CP(2): Message sent (14, 6, S_SEARCH)          
+CP(1): Message sent (13, 1, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(1,O_CONTINUE,0)]----[(13,1,S_SEARCH),(14,6,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (13,1,S_SEARCH)----(1,O_CONTINUE)---->(13,4,S_SEARCH)              
+CP(2): (14,6,S_SEARCH)----(1,O_CONTINUE)---->(14,6,S_INSERT)          
+CP(1): Message sent (13, 4, S_SEARCH)              
+CP(2): Message sent (14, 6, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(13,4,S_SEARCH),(14,6,S_INSERT)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              CP(2): Critical Value (before): 7887, a: 12, b: 15,  c:14              
+CP(2): (14,6,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): (13,4,S_SEARCH)----(1,O_CONTINUE)---->(13,6,S_SEARCH)          
+CP(1): Message sent (13, 6, S_SEARCH)              
+CP(2): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(13,6,S_SEARCH),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)          
+CP(1): (13,6,S_SEARCH)----(1,O_CONTINUE)---->(13,6,S_INSERT)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(13,1,S_SEARCH)          
+CP(1): Message sent (13, 6, S_INSERT)              
+CP(2): Message sent (13, 1, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(13,6,S_INSERT),(13,1,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          CP(1): Critical Value (before): 5258, a: 12, b: 14,  c:13          
+CP(1): (13,6,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): (13,1,S_SEARCH)----(1,O_CONTINUE)---->(13,4,S_SEARCH)              
+CP(2): Message sent (13, 4, S_SEARCH)          
+CP(1): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(0,0,S_IDLE),(13,4,S_SEARCH)]---->[(1,O_INSERT,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_INSERT) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(14,1,S_SEARCH)              
+CP(2): (13,4,S_SEARCH)----(1,O_CONTINUE)---->(13,6,S_SEARCH)          
+CP(1): Message sent (14, 1, S_SEARCH)              
+CP(2): Message sent (13, 6, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(1,O_CONTINUE,0)]----[(14,1,S_SEARCH),(13,6,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (14,1,S_SEARCH)----(1,O_CONTINUE)---->(14,4,S_SEARCH)              
+CP(2): (13,6,S_SEARCH)----(1,O_CONTINUE)---->(13,6,S_INSERT)          
+CP(1): Message sent (14, 4, S_SEARCH)              
+CP(2): Message sent (13, 6, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(14,4,S_SEARCH),(13,6,S_INSERT)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              
+CP(2): 13 already exists at index 8. Skipping the insert              
+CP(2): (13,6,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): (14,4,S_SEARCH)----(1,O_CONTINUE)---->(14,6,S_SEARCH)              
+CP(2): Message sent (0, 0, S_IDLE)          
+CP(1): Message sent (14, 6, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(14,6,S_SEARCH),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)          
+CP(1): (14,6,S_SEARCH)----(1,O_CONTINUE)---->(14,8,S_SEARCH)          
+CP(1): Message sent (14, 8, S_SEARCH)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(12,1,S_SEARCH)              
+CP(2): Message sent (12, 1, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(14,8,S_SEARCH),(12,1,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (14,8,S_SEARCH)----(1,O_CONTINUE)---->(14,8,S_INSERT)          
+CP(1): Message sent (14, 8, S_INSERT)              
+CP(2): (12,1,S_SEARCH)----(1,O_CONTINUE)---->(12,4,S_SEARCH)              
+CP(2): Message sent (12, 4, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(14,8,S_INSERT),(12,4,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): 14 already exists at index 7. Skipping the insert          
+CP(1): (14,8,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)              
+CP(2): (12,4,S_SEARCH)----(1,O_CONTINUE)---->(12,4,S_INSERT)          
+CP(1): Message sent (0, 0, S_IDLE)              
+CP(2): Message sent (12, 4, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(0,0,S_IDLE),(12,4,S_INSERT)]---->[(1,O_INSERT,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_INSERT) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              
+CP(2): 12 already exists at index 6. Skipping the insert              
+CP(2): (12,4,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(15,1,S_SEARCH)              
+CP(2): Message sent (0, 0, S_IDLE)          
+CP(1): Message sent (15, 1, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(1,O_CONTINUE,0)]----[(15,1,S_SEARCH),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(11,1,S_SEARCH)          
+CP(1): (15,1,S_SEARCH)----(1,O_CONTINUE)---->(15,4,S_SEARCH)          
+CP(1): Message sent (15, 4, S_SEARCH)              
+CP(2): Message sent (11, 1, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(15,4,S_SEARCH),(11,1,S_SEARCH)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)          
+CP(1): (15,4,S_SEARCH)----(1,O_CONTINUE)---->(15,6,S_SEARCH)              
+CP(2): (11,1,S_SEARCH)----(1,O_CONTINUE)---->(11,1,S_INSERT)          
+CP(1): Message sent (15, 6, S_SEARCH)              
+CP(2): Message sent (11, 1, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(15,6,S_SEARCH),(11,1,S_INSERT)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              
+CP(2): 11 already exists at index 4. Skipping the insert          
+CP(1): (15,6,S_SEARCH)----(1,O_CONTINUE)---->(15,8,S_SEARCH)              
+CP(2): (11,1,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): Message sent (15, 8, S_SEARCH)              
+CP(2): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(1,O_CONTINUE,0)]----[(15,8,S_SEARCH),(0,0,S_IDLE)]---->[(1,O_CONTINUE,0),(1,O_INSERT,0)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_INSERT) to CP(2)              
+CP(2): No more insertions!          
+CP(1): (15,8,S_SEARCH)----(1,O_CONTINUE)---->(15,7,S_SEARCH)              
+CP(2): (0,0,S_IDLE)----(1,O_INSERT)---->(0,0,S_OVER)          
+CP(1): Message sent (15, 7, S_SEARCH)              
+CP(2): Message sent (0, 0, S_OVER)                  
+HC: [(1,O_CONTINUE,0),(1,O_INSERT,0)]----[(15,7,S_SEARCH),(0,0,S_OVER)]---->[(1,O_CONTINUE,0),(1,O_CONTINUE,1)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: Message sent (1, O_CONTINUE) to CP(2)              
+CP(2): Received message in S_OVER state,exiting now..              
+CP(2) Exited.          
+CP(1): (15,7,S_SEARCH)----(1,O_CONTINUE)---->(15,7,S_INSERT)          
+CP(1): Message sent (15, 7, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(15,7,S_INSERT),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): 15 already exists at index 5. Skipping the insert          
+CP(1): (15,7,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(0,0,S_IDLE),(S_OVER))]---->[(1,O_INSERT,0),(S_OVER)]                  
+HC: Message sent (1, O_INSERT) to CP(1)          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(16,1,S_SEARCH)          
+CP(1): Message sent (16, 1, S_SEARCH)                  
+HC: [(1,O_INSERT,0),(S_OVER)]----[(16,1,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,1,S_SEARCH)----(1,O_CONTINUE)---->(16,4,S_SEARCH)          
+CP(1): Message sent (16, 4, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,4,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,4,S_SEARCH)----(1,O_CONTINUE)---->(16,6,S_SEARCH)          
+CP(1): Message sent (16, 6, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,6,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,6,S_SEARCH)----(1,O_CONTINUE)---->(16,8,S_SEARCH)          
+CP(1): Message sent (16, 8, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,8,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,8,S_SEARCH)----(1,O_CONTINUE)---->(16,7,S_SEARCH)          
+CP(1): Message sent (16, 7, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,7,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,7,S_SEARCH)----(1,O_CONTINUE)---->(16,5,S_SEARCH)          
+CP(1): Message sent (16, 5, S_SEARCH)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,5,S_SEARCH),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): (16,5,S_SEARCH)----(1,O_CONTINUE)---->(16,5,S_INSERT)          
+CP(1): Message sent (16, 5, S_INSERT)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(16,5,S_INSERT),(S_OVER))]---->[(1,O_CONTINUE,0),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)          
+CP(1): 16 already exists at index 3. Skipping the insert          
+CP(1): (16,5,S_INSERT)----(1,O_CONTINUE)---->(0,0,S_IDLE)          
+CP(1): Message sent (0, 0, S_IDLE)                  
+HC: [(1,O_CONTINUE,0),(S_OVER)]----[(0,0,S_IDLE),(S_OVER))]---->[(1,O_INSERT,0),(S_OVER)]                  
+HC: Message sent (1, O_INSERT) to CP(1)          
+CP(1): No more insertions!          
+CP(1): (0,0,S_IDLE)----(1,O_INSERT)---->(0,0,S_OVER)          
+CP(1): Message sent (0, 0, S_OVER)                  
+HC: [(1,O_INSERT,0),(S_OVER)]----[(0,0,S_OVER),(S_OVER))]---->[(1,O_CONTINUE,1),(S_OVER)]                  
+HC: Message sent (1, O_CONTINUE) to CP(1)                  
+HC: We should exit - both processes are done!                  
+HC Exited          
+CP(1): Received message in S_OVER state,exiting now..          
+CP(1) Exited.      
+Begin List
+      
+--Head Node
+      
+--(4, 11, 6)
+      
+--(6, 12, 8)
+      
+--(8, 13, 7)
+      
+--(7, 14, 5)
+      
+--(5, 15, 3)
+      
+--(3, 16, 2)
+      
+End List
+      
+Start Memory print
+      
+Location: 1, Value: 0, Next: 4      
+Location: 2, Value: 255, Next: 0      
+Location: 3, Value: 16, Next: 2      
+Location: 4, Value: 11, Next: 6      
+Location: 5, Value: 15, Next: 3      
+Location: 6, Value: 12, Next: 8      
+Location: 7, Value: 14, Next: 5      
+Location: 8, Value: 13, Next: 7      
+Location: 9, Value: 0, Next: 0      
+End Memory print
+4 processes created

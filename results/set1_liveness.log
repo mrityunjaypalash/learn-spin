@@ -1,0 +1,103 @@
+Running liveness verification on swf_termpaper.pml
+warning: for p.o. reduction to be valid the never claim must be stutter-invariant
+(never claims generated from LTL formulae are stutter-invariant)
+
+(Spin Version 6.5.1 -- 20 December 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (never_0)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 744 byte, depth reached 380, errors: 0
+     1009 states, stored (6379 visited)
+     2926 states, matched
+     9305 transitions (= visited+matched)
+        0 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.743	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.934	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  129.413	total actual memory usage
+
+
+unreached in proctype ChildProcess
+	swf_termpaper.pml:230, state 24, "p_state.l = l"
+	swf_termpaper.pml:231, state 25, "p_state.m = m"
+	swf_termpaper.pml:238, state 30, "newk = 0"
+	swf_termpaper.pml:230, state 40, "p_state.l = 0"
+	swf_termpaper.pml:231, state 41, "p_state.m = 1"
+	swf_termpaper.pml:215, state 58, "mnext = S_SEARCH"
+	swf_termpaper.pml:175, state 74, "printf('\nCP(%d): %d already exists at index %d. Skipping the insert',id,k,next)"
+	swf_termpaper.pml:388, state 112, "-end-"
+	(8 of 112 states)
+unreached in proctype HubController
+	swf_termpaper.pml:417, state 29, "c2 = 1"
+	swf_termpaper.pml:420, state 32, "c2 = 0"
+	swf_termpaper.pml:433, state 46, "c2 = 0"
+	swf_termpaper.pml:437, state 49, "c2 = 1"
+	swf_termpaper.pml:502, state 102, "isOver1 = 0"
+	swf_termpaper.pml:498, state 103, "((h_input.proc[0].m==S_OVER))"
+	swf_termpaper.pml:498, state 103, "else"
+	swf_termpaper.pml:512, state 108, "o1 = O_CONTINUE"
+	swf_termpaper.pml:508, state 109, "((h_input.proc[0].m==S_IDLE))"
+	swf_termpaper.pml:508, state 109, "else"
+	swf_termpaper.pml:522, state 113, "h_state.proc[0].o = o1"
+	swf_termpaper.pml:523, state 114, "h_state.proc[0].isOver = isOver1"
+	swf_termpaper.pml:494, state 115, "c1 = 1"
+	swf_termpaper.pml:530, state 118, "ch_HtoP[(id1-1)]!id1,h_send.c,h_send.o"
+	swf_termpaper.pml:531, state 119, "printf('\nHC: Message sent (%d, %e) to CP(%d)',h_send.c,h_send.o,id1)"
+	swf_termpaper.pml:528, state 120, "h_send.c = h_state.proc[0].c"
+	swf_termpaper.pml:417, state 134, "c2 = 1"
+	swf_termpaper.pml:420, state 137, "c2 = 0"
+	swf_termpaper.pml:433, state 151, "c2 = 0"
+	swf_termpaper.pml:437, state 154, "c2 = 1"
+	swf_termpaper.pml:502, state 207, "isOver1 = 0"
+	swf_termpaper.pml:498, state 208, "((h_input.proc[1].m==S_OVER))"
+	swf_termpaper.pml:498, state 208, "else"
+	swf_termpaper.pml:512, state 213, "o1 = O_CONTINUE"
+	swf_termpaper.pml:508, state 214, "((h_input.proc[1].m==S_IDLE))"
+	swf_termpaper.pml:508, state 214, "else"
+	swf_termpaper.pml:522, state 218, "h_state.proc[1].o = o1"
+	swf_termpaper.pml:523, state 219, "h_state.proc[1].isOver = isOver1"
+	swf_termpaper.pml:494, state 220, "c1 = 1"
+	swf_termpaper.pml:530, state 223, "ch_HtoP[(id2-1)]!id2,h_send.c,h_send.o"
+	swf_termpaper.pml:531, state 224, "printf('\nHC: Message sent (%d, %e) to CP(%d)',h_send.c,h_send.o,id2)"
+	swf_termpaper.pml:528, state 225, "h_send.c = h_state.proc[1].c"
+	swf_termpaper.pml:608, state 235, "-end-"
+	(29 of 235 states)
+unreached in proctype parent
+	linkedlistlib.pml:47, state 16, "printf('\n--(%d, %d, %d)\n',i,list[i].value,list[i].next)"
+	linkedlistlib.pml:49, state 17, "assert((list[i].value!=list[next].value))"
+	linkedlistlib.pml:58, state 25, "i = next"
+	linkedlistlib.pml:41, state 51, "printf('\nBegin List\n')"
+	linkedlistlib.pml:44, state 53, "next = list[i].next"
+	linkedlistlib.pml:47, state 55, "printf('\n--(%d, %d, %d)\n',i,list[i].value,list[i].next)"
+	linkedlistlib.pml:49, state 56, "assert((list[i].value!=list[next].value))"
+	linkedlistlib.pml:51, state 58, "printf('\n--Head Node\n')"
+	linkedlistlib.pml:46, state 59, "((i!=HEAD))"
+	linkedlistlib.pml:46, state 59, "else"
+	linkedlistlib.pml:58, state 64, "i = next"
+	linkedlistlib.pml:55, state 65, "((next==TAIL))"
+	linkedlistlib.pml:55, state 65, "else"
+	linkedlistlib.pml:43, state 67, "(1)"
+	linkedlistlib.pml:39, state 71, "i = HEAD"
+	linkedlistlib.pml:66, state 73, "printf('\nStart Memory print\n')"
+	linkedlistlib.pml:67, state 74, "i = HEAD"
+	linkedlistlib.pml:68, state 76, "printf('\nLocation: %d, Value: %d, Next: %d',i,list[i].value,list[i].next)"
+	linkedlistlib.pml:67, state 77, "i = (i+1)"
+	linkedlistlib.pml:65, state 84, "i = HEAD"
+	swf_termpaper.pml:626, state 85, "-end-"
+	(19 of 85 states)
+unreached in claim never_0
+	swf_termpaper.pml.nvr:8, state 6, "-end-"
+	(1 of 6 states)
+
+pan: elapsed time 0.03 seconds
+pan: rate 212633.33 states/second
+Done running liveness verification on swf_termpaper.pml

@@ -1,0 +1,51 @@
+Running safety verification on swf_termpaper.pml
+warning: for p.o. reduction to be valid the never claim must be stutter-invariant
+(never claims generated from LTL formulae are stutter-invariant)
+
+(Spin Version 6.5.1 -- 20 December 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (never_0)
+	assertion violations	+ (if within scope of claim)
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by never claim)
+
+State-vector 736 byte, depth reached 2197, errors: 0
+     8412 states, stored
+     1611 states, matched
+    10023 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    6.129	equivalent memory usage for states (stored*(State-vector + overhead))
+    6.983	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  135.175	total actual memory usage
+
+
+unreached in proctype ChildProcess
+	swf_termpaper.pml:230, state 24, "p_state.l = l"
+	swf_termpaper.pml:231, state 25, "p_state.m = m"
+	swf_termpaper.pml:215, state 58, "mnext = S_SEARCH"
+	(3 of 112 states)
+unreached in proctype HubController
+	swf_termpaper.pml:417, state 29, "c2 = 1"
+	swf_termpaper.pml:420, state 32, "c2 = 0"
+	swf_termpaper.pml:417, state 134, "c2 = 1"
+	swf_termpaper.pml:420, state 137, "c2 = 0"
+	(4 of 235 states)
+unreached in proctype parent
+	linkedlistlib.pml:47, state 16, "printf('\n--(%d, %d, %d)\n',i,list[i].value,list[i].next)"
+	linkedlistlib.pml:49, state 17, "assert((list[i].value!=list[next].value))"
+	linkedlistlib.pml:58, state 25, "i = next"
+	(3 of 85 states)
+unreached in claim never_0
+	swf_termpaper.pml.nvr:10, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 0.15 seconds
+pan: rate     56080 states/second
+Done running safety verification on swf_termpaper.pml

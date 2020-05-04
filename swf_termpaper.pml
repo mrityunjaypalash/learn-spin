@@ -51,7 +51,7 @@ message.
 		./pan -a -f
 
 	
-
+*/
 
 #include "linkedlistlib.pml"
 #define MQLENGTH 20
@@ -253,7 +253,22 @@ inline next_to_insert() {
 		= (⊥, ⊥, Done), if m = Insert
 
  */
+/*
+	Data Sets used for final run:
+	1. Set 1 - same sequence, same numbers  
+		A: 100, 99, 98, 97, 96, 95
+		B: 100, 99, 98, 97, 96, 95
 
+	2. Set 2 - same sequence, some different numbers
+		A: 50, 51, 1, 2, 60, 61
+		B: 50, 51, 2, 3, 60, 61
+
+	3. Set 3 - different sequences of numbers
+		A: 11, 12, 13, 14, 15, 16
+		B: 16, 15, 14, 13, 12, 11
+
+
+*/
 proctype ChildProcess(byte id; chan ch_id) {
 
 	Pinput p_input
@@ -267,6 +282,7 @@ proctype ChildProcess(byte id; chan ch_id) {
 	byte insert_list[6];
 	
 	printf("\nCP(%d) Started.", id)
+	// Set 2
 	insert_list[0] = 50
 	insert_list[1] = 51
 	insert_list[2] = id
@@ -274,6 +290,35 @@ proctype ChildProcess(byte id; chan ch_id) {
 	insert_list[4] = 60
 	insert_list[5] = 61
 	
+	/* // Set 1
+	insert_list[0] = 100
+	insert_list[1] = 99
+	insert_list[2] = 98
+	insert_list[3] = 97
+	insert_list[4] = 96
+	insert_list[5] = 95
+	*/
+
+	/* // Set 3
+	if
+	:: (id == 1) ->
+		insert_list[0] = 11
+		insert_list[1] = 12
+		insert_list[2] = 13
+		insert_list[3] = 14
+		insert_list[4] = 15
+		insert_list[5] = 16
+	:: (id == 2) ->
+		insert_list[5] = 11
+		insert_list[4] = 12
+		insert_list[3] = 13
+		insert_list[2] = 14
+		insert_list[1] = 15
+		insert_list[0] = 16
+	fi
+	
+	*/
+
 	to_insert = 0
 	max_insert = 5
 
