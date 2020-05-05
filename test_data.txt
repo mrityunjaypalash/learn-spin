@@ -2,16 +2,16 @@ Data sets for testing.
 
 
 1. Set 1 - same sequence, same numbers  
-A: 100, 99, 98, 97, 96, 95
-B: 100, 99, 98, 97, 96, 95
+    A: 100, 99, 98, 97, 96, 95
+    B: 100, 99, 98, 97, 96, 95
 
 2. Set 2 - same sequence, some different numbers
-A: 50, 51, 1, 2, 60, 61
-B: 50, 51, 2, 3, 60, 61
+    A: 50, 51, 1, 2, 60, 61
+    B: 50, 51, 2, 3, 60, 61
 
-3. Set 3 - different count of numbers
-A: 1, 10, 20, 10, 1
-B: 15, 5, 25
+3. Set 3 - different sequences of numbers
+    A: 11, 12, 13, 14, 15, 16
+    B: 16, 15, 14, 13, 12, 11
 
 
 	
