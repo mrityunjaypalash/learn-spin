@@ -1,0 +1,5 @@
+echo "Running liveness verification on swf_termpaper.pml"
+spin -a -f '!<>((insert_counter[0] > 0) && (insert_counter[1] > 0))' swf_termpaper.pml
+gcc -o pan pan.c
+./pan -a -f
+echo "Done running liveness verification on swf_termpaper.pml"
