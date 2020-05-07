@@ -11,4 +11,5 @@ To run safety, run the batch file included in this folder:
 To run liveness verification, run the batch file included in this folder:
 ./liveness
 
-Enjoy! 
+The term paper (PDF) is named SWF_Term_Paper_Final_20200505.
+
